@@ -8,18 +8,18 @@
     <meta name="generator" content="Hugo 0.145.0">
     <title>Album example · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
 
     <script src="assets/js/color-modes.js"></script>
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <!-- <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="assets/img/favicons/favicon.ico">
+<link rel="icon" href="assets/img/favicons/favicon.ico"> -->
 <meta name="theme-color" content="#712cf9">
 
 
@@ -190,12 +190,12 @@
         </ul>
 
         <!-- Search and buttons -->
-        <form class="d-flex me-3" role="search">
+        <!-- <form class="d-flex me-3" role="search">
           <input class="form-control form-control-dark" type="search" placeholder="Search..." aria-label="Search">
-        </form>
+        </form> -->
         <div class="d-flex">
-          <a href="auth/login.php" class="btn btn-outline-light me-2">Login</a>
-          <a href="auth/register.php" class="btn btn-warning">Sign-up</a>
+          <button  class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signInAccount">SIGN IN</button>
+          <button  class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#registarNewAccount">SIGN UP</button>
         </div>
       </div>
     </nav>

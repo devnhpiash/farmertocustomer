@@ -1,4 +1,4 @@
-<footer class="text-body-secondary py-5">
+<footer class="text-body-secondary py-1">
 <div class="container">
   <footer class="py-5">
     <div class="row">
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-t-1 border-top">
       <p>© 2025 Company, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
