@@ -17,20 +17,6 @@
     }
   }
 
-  .product-image-wrapper {
-    width: 100%;
-    height: 250px;
-    /* Uniform height */
-    overflow: hidden;
-  }
-
-  .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Makes sure the image fills the box and crops excess */
-  }
-
   @media (max-width: 768px) {
     .product-image-wrapper {
       height: 200px;
@@ -41,6 +27,59 @@
     .product-image-wrapper {
       height: 160px;
     }
+  }
+
+  .product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .product-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* Maintain square image */
+    background-color: #f8f9fa;
+    overflow: hidden;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .product-img-wrapper:hover .product-img {
+    transform: scale(1.05);
+  }
+
+  .btn-buy {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-buy:hover {
+    background-color: #d81b60;
+  }
+
+  .price {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 </style>
 <main>
@@ -78,135 +117,125 @@
       </div>
     </div>
   </section>
-
-
   <div class="album py-5 bg-body-tertiary">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f1.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f1.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
         </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f2.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
         </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f3.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f4.png" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f5.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f6.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm h-100">
-            <div class="product-image-wrapper">
-              <img src="product-image/f7.jpg" class="card-img-top product-image" alt="Product Name">
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted small">A short and clear product description that tells the customer what it's about.</p>
-              <div class="mt-auto">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="fw-bold text-primary">$29.99</span>
-                </div>
-                <button class="btn btn-sm btn-success w-100">Buy Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f2.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f3.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f4.png" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+          <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f5.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+          <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f6.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+          <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card product-card shadow-sm h-100 border-0">
+        <div class="product-img-wrapper">
+          <img src="product-image/f7.jpg" class="card-img-top product-img" alt="Product Image">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
+          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <!-- <span class="price  fw-bold fs-5"> </span> -->
+            <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
+          </div>
+          <a href="product.php" class="btn btn-buy w-100 mt-auto">🛒 Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
   </div>
 
   <!-- Sign UP MODEL START -->
@@ -232,20 +261,20 @@
             <label for="inputAddress" class="form-label">Address</label>
             <input type="text" id="inputAddress" class="form-control" name="address" Placeholder="write your address...">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radioDefault1" required>
-              <label class="form-check-label" for="radioDefault1">
+              <input class="form-check-input" type="radio" name="userType" id="radio" required>
+              <label class="form-check-label" for="radio">
                 AS A FARMER
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radioDefault2" required>
-              <label class="form-check-label" for="radioDefault2">
+              <input class="form-check-input" type="radio" name="userType" id="radio2" required>
+              <label class="form-check-label" for="radio2">
                 AS A STUDENT (PART-TIME-JOB)
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radioDefault2" required>
-              <label class="form-check-label" for="radioDefault2">
+              <input class="form-check-input" type="radio" name="userType" id="radio3" required>
+              <label class="form-check-label" for="radio3">
                 AS A CUSTOMER
               </label>
             </div>
@@ -280,10 +309,10 @@
         </div>
         <form action="#" method="post" autocomplete="off">
           <div class="modal-body">
-            <label for="inputEmail" class="form-label">Email Address</label>
-            <input type="email" id="inputEmail" class="form-control" name="email" Placeholder="write your full email ex: youname@gmail.com" required autocomplete="off">
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
+            <label for="inputEmailSignIN" class="form-label">Email Address</label>
+            <input type="email" id="inputEmailSignIN" class="form-control" name="email" Placeholder="write your full email ex: youname@gmail.com" required autocomplete="off">
+            <label for="inputPassword5SignIN" class="form-label">Password</label>
+            <input type="password" id="inputPassword5SignIN" class="form-control" aria-describedby="passwordHelpBlock" required>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

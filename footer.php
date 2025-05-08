@@ -1,64 +1,57 @@
-<footer class="text-body-secondary py-1">
-<div class="container">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+<footer class="footer py-5 mt-5 border-top">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- About -->
+      <div class="col-sm-6 col-lg-3">
+        <h5>About Us</h5>
+        <p class="text-body-secondary small">
+          YourBrand is your go-to for stylish, affordable fashion delivered worldwide.
+        </p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-body-secondary"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-body-secondary"><i class="bi bi-twitter fs-5"></i></a>
+          <a href="#" class="text-body-secondary"><i class="bi bi-instagram fs-5"></i></a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="col-sm-6 col-lg-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="text-body-secondary text-decoration-none">Shop</a></li>
+          <li><a href="#" class="text-body-secondary text-decoration-none">About</a></li>
+          <li><a href="#" class="text-body-secondary text-decoration-none">Contact</a></li>
+          <li><a href="#" class="text-body-secondary text-decoration-none">FAQs</a></li>
         </ul>
       </div>
 
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
+      <!-- Contact -->
+      <div class="col-sm-6 col-lg-3">
+        <h5>Contact</h5>
+        <p class="text-body-secondary small mb-1"><i class="bi bi-envelope"></i> support@yourbrand.com</p>
+        <p class="text-body-secondary small mb-1"><i class="bi bi-phone"></i> +1 234 567 890</p>
+        <p class="text-body-secondary small"><i class="bi bi-geo-alt"></i> 123 Main Street, City</p>
       </div>
 
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-5 offset-md-1 mb-3">
+      <!-- Newsletter -->
+      <div class="col-sm-6 col-lg-3">
+        <h5>Newsletter</h5>
+        <p class="text-body-secondary small">Sign up for updates and offers.</p>
         <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
+          <div class="input-group input-group-sm">
+            <input type="email" class="form-control" placeholder="Your email" />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
           </div>
         </form>
       </div>
+
     </div>
 
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-t-1 border-top">
-      <p>© 2025 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24" aria-hidden="true"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
-    </div>
-  </footer>
-</div>
+    <hr class="my-4 border-light-subtle">
+    <p class="text-center text-body-secondary small mb-0">© 2025 YourBrand. All rights reserved.</p>
+  </div>
 </footer>
 <script defer src="assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
-
-    </body>
+</body>
 </html>
