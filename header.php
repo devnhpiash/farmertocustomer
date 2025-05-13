@@ -7,22 +7,10 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.145.0">
     <title>Album example · Bootstrap v5.3</title>
-
-
-
     <script src="assets/js/color-modes.js"></script>
-
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="assets/img/favicons/favicon.ico"> -->
-<meta name="theme-color" content="#712cf9">
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="theme-color" content="#712cf9">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -161,7 +149,6 @@
     </button>
   </li>
 </ul>
-
     </div>
 
     <header class="p-3 text-bg-dark">
@@ -173,12 +160,10 @@
         </svg>
         Farm2Shop
       </a>
-
       <!-- Mobile menu button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Collapsible menu -->
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -188,11 +173,6 @@
           <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About</a></li>
         </ul>
-
-        <!-- Search and buttons -->
-        <!-- <form class="d-flex me-3" role="search">
-          <input class="form-control form-control-dark" type="search" placeholder="Search..." aria-label="Search">
-        </form> -->
         <div class="d-flex">
           <button  class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signInAccount">SIGN IN</button>
           <button  class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#registarNewAccount">SIGN UP</button>

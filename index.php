@@ -1,4 +1,7 @@
-<?php include_once 'header.php'; ?>
+<?php 
+include_once 'header.php';
+include_once 'private/user_function.php';
+ ?>
 <style>
   .carousel-image {
     height: 400px;
@@ -81,42 +84,51 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+  .carousel-inner {
+    border-radius: 10px;
+  }
 </style>
 <main>
-  <section class="py-5">
-    <div class="container">
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="product-image/b1.jpeg" class="d-block w-100 img-fluid carousel-image" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img src="product-image/b2.jpg" class="d-block w-100 img-fluid carousel-image" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img src="product-image/b3.jpg" class="d-block w-100 img-fluid carousel-image" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <img src="product-image/b4.jpg" class="d-block w-100 img-fluid carousel-image" alt="Fourth slide">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<section class="py-3">
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="product-image/2.png" class="d-block w-100 img-fluid carousel-image" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="product-image/3.png" class="d-block w-100 img-fluid carousel-image" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="product-image/4.png" class="d-block w-100 img-fluid carousel-image" alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+          <img src="product-image/ban1.png" class="d-block w-100 img-fluid carousel-image" alt="Slide 4">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
+
   <div class="album py-5 bg-body-tertiary">
   <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -128,7 +140,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -144,7 +156,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -160,7 +172,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -176,7 +188,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
           <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -192,7 +204,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
           <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -208,7 +220,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
           <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
           </div>
@@ -224,7 +236,7 @@
         </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title text-dark fw-semibold mb-1">Elegant Summer Dress</h5>
-          <p class="card-text text-muted small mb-3">Lightweight and breathable — perfect for sunny days.</p>
+          <p class="card-text text-dark small mb-3">Lightweight and breathable — perfect for sunny days.</p>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <!-- <span class="price  fw-bold fs-5"> </span> -->
             <strong class="price  fw-bold fs-5"><i style="font-size:30px">৳</i> 29.99</strong>
@@ -247,7 +259,7 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Register New Account</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="#" method="post" autocomplete="off">
+        <form  method="POST" autocomplete="off">
           <div class="modal-body">
             <label for="inputName" class="form-label">Your Full Name</label>
             <input type="text" id="inputName" class="form-control" name="name" Placeholder="write your full name..." required>
@@ -261,38 +273,38 @@
             <label for="inputAddress" class="form-label">Address</label>
             <input type="text" id="inputAddress" class="form-control" name="address" Placeholder="write your address...">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radio" required>
+              <input class="form-check-input" type="radio" name="userType" id="radio" value="farmer" required>
               <label class="form-check-label" for="radio">
                 AS A FARMER
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radio2" required>
+              <input class="form-check-input" type="radio" name="userType" id="radio2" value="student" required>
               <label class="form-check-label" for="radio2">
                 AS A STUDENT (PART-TIME-JOB)
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="userType" id="radio3" required>
+              <input class="form-check-input" type="radio" name="userType" id="radio3" value="customer" required>
               <label class="form-check-label" for="radio3">
                 AS A CUSTOMER
               </label>
             </div>
 
             <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
+            <input type="password" id="inputPassword5" name="password" class="form-control" aria-describedby="passwordHelpBlock" required>
             <div id="passwordHelpBlock" class="form-text">
               Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
             </div>
             <label for="inputCPassword5" class="form-label">Confirm Password</label>
-            <input type="password" id="inputCPassword5" class="form-control" aria-describedby="CpasswordHelpBlock" required>
+            <input type="password" id="inputCPassword5" name="cpassword" class="form-control" aria-describedby="CpasswordHelpBlock" required>
             <div id="passwordHelpBlock" class="form-text">
               Your confirm password must matched with password!
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Registar</button>
+            <button type="submit" class="btn btn-primary" name="register" id="register">Registar</button>
           </div>
         </form>
       </div>
@@ -307,16 +319,16 @@
           <h1 class="modal-title fs-5" id="signInAccountLable">Sign Into Account</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="#" method="post" autocomplete="off">
+        <form action="dashboard/private/user_auth_function.php" method="POST" autocomplete="off">
           <div class="modal-body">
             <label for="inputEmailSignIN" class="form-label">Email Address</label>
             <input type="email" id="inputEmailSignIN" class="form-control" name="email" Placeholder="write your full email ex: youname@gmail.com" required autocomplete="off">
             <label for="inputPassword5SignIN" class="form-label">Password</label>
-            <input type="password" id="inputPassword5SignIN" class="form-control" aria-describedby="passwordHelpBlock" required>
+            <input type="password" id="inputPassword5SignIN" class="form-control" name="password" required autocomplete="off">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Sign In</button>
+            <button type="submit" class="btn btn-primary" name="signin">Sign In</button>
           </div>
         </form>
       </div>
@@ -326,4 +338,5 @@
 
 
 </main>
+<script src="assets/js/user_register_form_validation.js"></script>
 <?php include_once 'footer.php'; ?>
